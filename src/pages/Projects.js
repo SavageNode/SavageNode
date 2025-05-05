@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiFilter, FiX } from 'react-icons/fi';
+import ecommerce from '../assets/ecomm.png';
+import task from '../assets/task.png';
+import realestate from '../assets/realestate.png';
+import weather from '../assets/weather.png';
+import analytics from '../assets/analytics.png';
+import fitness from '../assets/fitness.png';
 
 const ProjectsContainer = styled.div`
   padding: 20px;
@@ -198,6 +204,8 @@ const DetailModal = styled(motion.div)`
 
 const ModalContent = styled(motion.div)`
   background-color: ${props => props.theme.colors.lightBg};
+  margin-top: 100px;
+  margin-bottom: 20px;
   border-radius: 15px;
   width: 100%;
   max-width: 800px;
@@ -344,12 +352,12 @@ const projectsData = [
       "Admin dashboard for product and order management",
       "Real-time inventory tracking"
     ],
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux", "Stripe API"],
+    technologies: ["React", "Python", "FastAPI", "MySQL", "Firebase", "Stripe"],
     category: "Full Stack",
-    image: "https://via.placeholder.com/600x400/0f0f1a/6c5ce7?text=E-Commerce+Platform",
+    image: ecommerce,
     siteUrl: "#",
     githubUrl: "#",
-    tags: ["React", "Node.js", "MongoDB"]
+    tags: ["React", "Python", "FastAPI", "MySQL"]
   },
   {
     id: 2,
@@ -363,9 +371,9 @@ const projectsData = [
       "Progress visualization and reporting",
       "Notification system for task updates"
     ],
-    technologies: ["React", "Firebase", "React DnD", "Chart.js", "Material UI"],
+    technologies: ["React", "Firebase", "Chart.js", "Material UI"],
     category: "Frontend",
-    image: "https://via.placeholder.com/600x400/0f0f1a/6c5ce7?text=Task+Management",
+    image: task,
     siteUrl: "#",
     githubUrl: "#",
     tags: ["React", "Firebase", "Material UI"]
@@ -384,7 +392,7 @@ const projectsData = [
     ],
     technologies: ["React", "Node.js", "PostgreSQL", "Google Maps API", "AWS S3"],
     category: "Full Stack",
-    image: "https://via.placeholder.com/600x400/0f0f1a/6c5ce7?text=Real+Estate+App",
+    image: realestate,
     siteUrl: "#",
     githubUrl: "#",
     tags: ["React", "Node.js", "PostgreSQL"]
@@ -403,7 +411,7 @@ const projectsData = [
     ],
     technologies: ["React", "D3.js", "OpenWeather API", "Recharts", "Geolocation API"],
     category: "Frontend",
-    image: "https://via.placeholder.com/600x400/0f0f1a/6c5ce7?text=Weather+Dashboard",
+    image: weather,
     siteUrl: "#",
     githubUrl: "#",
     tags: ["React", "API Integration", "D3.js"]
@@ -422,7 +430,7 @@ const projectsData = [
     ],
     technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js", "Social Media APIs"],
     category: "Full Stack",
-    image: "https://via.placeholder.com/600x400/0f0f1a/6c5ce7?text=Social+Media+Analytics",
+    image: analytics,
     siteUrl: "#",
     githubUrl: "#",
     tags: ["React", "Node.js", "Chart.js"]
@@ -441,7 +449,7 @@ const projectsData = [
     ],
     technologies: ["React", "Firebase", "Chart.js", "Progressive Web App", "Health APIs"],
     category: "Frontend",
-    image: "https://via.placeholder.com/600x400/0f0f1a/6c5ce7?text=Fitness+Tracker",
+    image: fitness,
     siteUrl: "#",
     githubUrl: "#",
     tags: ["React", "Firebase", "PWA"]
@@ -543,14 +551,6 @@ const Projects = () => {
                   ))}
                 </ProjectTags>
                 
-                <ProjectLinks>
-                  <ProjectLink href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                    <FiGithub />
-                  </ProjectLink>
-                  <ProjectLink href={project.siteUrl} target="_blank" rel="noopener noreferrer" aria-label="Live Site">
-                    <FiExternalLink />
-                  </ProjectLink>
-                </ProjectLinks>
               </ProjectInfo>
             </ProjectCard>
           ))}
@@ -603,12 +603,6 @@ const Projects = () => {
               </DetailSection>
               
               <DetailLinks>
-                <DetailLink href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
-                  <FiGithub /> GitHub Repository
-                </DetailLink>
-                <DetailLink href={selectedProject.siteUrl} target="_blank" rel="noopener noreferrer">
-                  <FiExternalLink /> Live Demo
-                </DetailLink>
               </DetailLinks>
             </ModalContent>
           </DetailModal>

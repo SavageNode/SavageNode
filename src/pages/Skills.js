@@ -293,19 +293,19 @@ const skillsData = [
       { name: "Node.js", percentage: 88 },
       { name: "Express.js", percentage: 85 },
       { name: "RESTful APIs", percentage: 90 },
-      { name: "GraphQL", percentage: 80 },
-      { name: "Serverless", percentage: 75 }
+      { name: "Python", percentage: 90 },
+      { name: "Java", percentage: 75 }
     ]
   },
   {
     category: "Database",
     icon: <FiDatabase />,
     skills: [
-      { name: "MongoDB", percentage: 90 },
-      { name: "PostgreSQL", percentage: 85 },
-      { name: "Firebase", percentage: 88 },
-      { name: "Redis", percentage: 70 },
-      { name: "MySQL", percentage: 80 }
+      { name: "MongoDB", percentage: 80 },
+      { name: "PostgreSQL", percentage: 80 },
+      { name: "Firebase", percentage: 90 },
+      { name: "Redis", percentage: 60 },
+      { name: "MySQL", percentage: 90 }
     ]
   },
   {
@@ -323,7 +323,7 @@ const skillsData = [
     category: "DevOps & Tools",
     icon: <FiTool />,
     skills: [
-      { name: "Git/GitHub", percentage: 92 },
+      { name: "Git/GitHub", percentage: 95 },
       { name: "Docker", percentage: 80 },
       { name: "CI/CD", percentage: 78 },
       { name: "AWS", percentage: 75 },
@@ -347,24 +347,21 @@ const skillsData = [
 const tagsData = [
   { name: "React.js", size: 3 },
   { name: "JavaScript", size: 3 },
-  { name: "TypeScript", size: 2 },
   { name: "Node.js", size: 3 },
   { name: "Express", size: 2 },
-  { name: "MongoDB", size: 2 },
+  { name: "Python", size: 3 },
+  { name: "Java", size: 1 },
+  { name: "FastAPI", size: 2 },
+  { name: "MongoDB", size: 1 },
   { name: "PostgreSQL", size: 2 },
-  { name: "Redux", size: 2 },
   { name: "Next.js", size: 2 },
   { name: "GraphQL", size: 1 },
   { name: "HTML5", size: 2 },
-  { name: "CSS3", size: 2 },
   { name: "Sass", size: 1 },
-  { name: "Tailwind CSS", size: 2 },
-  { name: "Material UI", size: 2 },
+  { name: "Tailwind CSS", size: 1 },
+  { name: "Material UI", size: 1 },
   { name: "Styled Components", size: 2 },
-  { name: "Webpack", size: 1 },
-  { name: "Babel", size: 1 },
   { name: "Jest", size: 1 },
-  { name: "React Testing Library", size: 1 },
   { name: "Git", size: 2 },
   { name: "GitHub", size: 2 },
   { name: "Responsive Design", size: 2 },
@@ -380,21 +377,21 @@ const tagsData = [
 // Experience data
 const experienceData = [
   {
-    date: "2021 - Present",
-    title: "Senior React Developer",
-    company: "Tech Innovations Inc.",
-    description: "Leading the frontend development team, architecting scalable React applications, and implementing best practices for code quality and performance optimization."
+    date: "2023 - 2025",
+    title: "Software Engineer II",
+    company: "JP Morgan Chase",
+    description: "Developed and maintained backend services using Java Spring Boot, Python FastAPI, and Gaia MySQL. Collaborated with developers to deliver high-quality, responsive web experiences and backend services."
   },
   {
-    date: "2019 - 2021",
+    date: "2022 - 2023",
     title: "Full Stack Developer",
-    company: "Digital Solutions Group",
-    description: "Developed full-stack web applications using React.js and Node.js. Collaborated with designers and backend developers to deliver high-quality, responsive web experiences."
+    company: "Wiley Edge",
+    description: "Developed full-stack web applications using React.js and Java Spring Boot. Collaborated with designers and backend developers to deliver high-quality, responsive web experiences and backend services."
   },
   {
-    date: "2017 - 2019",
+    date: "2017 - 2022",
     title: "Frontend Developer",
-    company: "Web Creations Co.",
+    company: "SavageNode",
     description: "Built responsive user interfaces using modern JavaScript frameworks. Implemented pixel-perfect designs and optimized web performance."
   },
   {

@@ -4,14 +4,14 @@ import styled, { keyframes } from 'styled-components';
 const ShootingStarAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translateX(0) translateY(0) rotate(215deg) scale(0);
+    transform: translateX(0) translateY(0) rotate(145deg) scale(0);
   }
   70% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translateX(-500px) translateY(500px) rotate(215deg) scale(1);
+    transform: translateX(-500px) translateY(500px) rotate(155deg) scale(1);
   }
 `;
 

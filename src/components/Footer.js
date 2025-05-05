@@ -96,25 +96,22 @@ const Footer = () => {
         </Logo>
         
         <SocialLinks>
-          <SocialLink href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <SocialLink href="https://github.com/SavageNode" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FiGithub />
           </SocialLink>
-          <SocialLink href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <SocialLink href="https://www.linkedin.com/in/dejan-savic-/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FiLinkedin />
           </SocialLink>
-          <SocialLink href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <FiTwitter />
-          </SocialLink>
-          <SocialLink href="mailto:your.email@example.com" aria-label="Email">
+          <SocialLink href="mailto:savic.dejan.business@gmail.com" aria-label="Email">
             <FiMail />
           </SocialLink>
         </SocialLinks>
         
         <FooterNav>
-          <FooterLink href="#about">About</FooterLink>
-          <FooterLink href="#services">Services</FooterLink>
-          <FooterLink href="#portfolio">Portfolio</FooterLink>
-          <FooterLink href="#contact">Contact</FooterLink>
+          <FooterLink href="">About</FooterLink>
+          <FooterLink href="skills">Services</FooterLink>
+          <FooterLink href="projects">Portfolio</FooterLink>
+          <FooterLink href="contact">Contact</FooterLink>
         </FooterNav>
         
         <Divider />

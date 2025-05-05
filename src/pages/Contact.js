@@ -260,26 +260,28 @@ const Contact = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
+    // Create mailto link with form data
+    const mailtoLink = `mailto:savic.dejan.business@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    
+    // Open the mailto link
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    setSubmitStatus('success');
+    
+    // Reset form after successful submission
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    
+    // Reset status after 5 seconds
     setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 5000);
-    }, 1500);
+      setSubmitStatus(null);
+    }, 5000);
   };
   
   return (
@@ -391,7 +393,7 @@ const Contact = () => {
               </ContactIcon>
               <ContactText>
                 <h3>Email</h3>
-                <p>contact@savagenode.com</p>
+                <p>savic.dejan.business@gmail.com</p>
               </ContactText>
             </ContactMethod>
             
@@ -401,7 +403,7 @@ const Contact = () => {
               </ContactIcon>
               <ContactText>
                 <h3>Phone</h3>
-                <p>+1 (123) 456-7890</p>
+                <p>+1 (682) 203-7353</p>
               </ContactText>
             </ContactMethod>
             
@@ -411,19 +413,16 @@ const Contact = () => {
               </ContactIcon>
               <ContactText>
                 <h3>Location</h3>
-                <p>Belgrade, Serbia</p>
+                <p>Dallas, Texas</p>
               </ContactText>
             </ContactMethod>
             
             <SocialLinks>
-              <SocialLink href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5 }}>
+              <SocialLink href="https://www.linkedin.com/in/dejan-savic-/" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5 }}>
                 <FiLinkedin />
               </SocialLink>
-              <SocialLink href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5 }}>
+              <SocialLink href="https://github.com/SavageNode" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5 }}>
                 <FiGithub />
-              </SocialLink>
-              <SocialLink href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" whileHover={{ y: -5 }}>
-                <FiTwitter />
               </SocialLink>
             </SocialLinks>
           </InfoCard>
@@ -436,11 +435,11 @@ const Contact = () => {
             <InfoTitle>My <span>Location</span></InfoTitle>
             <MapContainer>
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d181139.35491768334!2d20.282514087266293!3d44.815489905337384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade%2C%20Serbia!5e0!3m2!1sen!2sus!4v1652015857300!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214592.19404771007!2d-96.896903665016!3d32.81868463616725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1746466969913!5m2!1sen!2sus" 
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Belgrade Map"
+                title="Dallas Map"
               ></iframe>
             </MapContainer>
           </InfoCard>
